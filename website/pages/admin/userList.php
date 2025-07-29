@@ -8,7 +8,7 @@ if (!authorisedAccess(false, false, true)) {
 ?>
     <title>User List</title>
     <link rel="stylesheet" href="../../assets/css/moduleList.css">
-    <h1>Enabled User List</h1>
+    <h1 style="display: flex; justify-content: center; align-items: center; padding-top: 20px" > Enabled User List</h1>
 <?php
 $userList = $conn->query("SELECT ID, Username, AccessLevel, Enabled FROM Users WHERE Enabled=1 ORDER BY ID DESC"); #Get all Enabled Modules
 while ($userData = $userList->fetch()) {
